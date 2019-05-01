@@ -1,5 +1,29 @@
 # Job_Interview
 
+### Program vs Process
+#### Program
+      - 보조 기억장치(HDD,SSD)에 존재하는 코드와 데이터의 묶음. (정적인 개념)
+#### Process
+      - 메모리에 적재되고 CPU를 할당받아 실행중인 프로그램의 인스턴스(독립된 개체). (동적인 개념)
+      
+### Process vs Thread
+#### Process
+      - 프로세스는 최소 1개의 스레드를 갖고 있다.
+      - 각각의 프로세스는 독립된 메모리 영역(Code, Stack, Heap, Data)을 갖으며 별도의 주소 공간에서 실행된다.
+      - 다른 프로세스의 변수나 자료구조에 접근할 수 없다. (IPC 사용시 접근 가능. Inter-Process Communication)
+### Thread
+      - 프로세스 내에서 실행되는 여러 흐름의 단위.
+      - 프로세스 내에서 각각의 독립된 Register, Stack을 할당받고 (Code, Heap, Data)는 공유한다. (주소공간이나 자원들을 공유)
+      
+### Multi Process vs Multi Thread
+#### Multi Processing
+      - 하나의 응용 프로그램을 여러 개의 프로세스로 구성하여 각 프로세스가 하나의 작업을 처리하도록 하는 것.
+      - 장점 : 하나의 프로세스가 죽어도 다른 프로세스가 일을 처리할 수 있다.
+      - 단점 : Context Switching에 의한 오버헤드. 프로세스 간의 복잡한 통신 기법(IPC)
+#### Multi Threading
+      - 
+               
+
 ### RTOS ( Real Time Operating System )
   - 실시간 응용 프로그램을 위해 개발된 운영체제.
   - 운영체제의 기능중 CPU시간 관리 부분에 에 초점을 맞추어 설계되었다.
@@ -37,8 +61,9 @@
   - 메모리 할당과 동시에 초기값 지정(초기화) 가능.
   - 생성자를 자동으로 호출한다. (생성자는 객체를 자동으로 초기화 시켜준다.)
   
-          - 재할당이 빈번히 일어날 경우 malloc을 이용하여 realloc을 쓰는 형태가 더 효율적이다. 
-          - new의 경우 '할당 -> 복사 -> 해제'하여야 한다.
+        재할당이 빈번히 일어날 경우 malloc을 이용하여 realloc을 쓰는 형태가 더 효율적이다. 
+        new의 경우 '할당 -> 복사 -> 해제'하여야 한다.
+
 #### Realloc과 메모리 접근
         realloc은 동적으로 할당한 메모리를 재할당하는 함수이다. 
         기존에 malloc을 이용하여 10개 int 메모리를 동적할당 하였고 시작 메모리가 10이라고 가정한다.
