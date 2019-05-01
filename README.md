@@ -11,3 +11,12 @@
   - View        : 텍스트, 체크박스 같은 사용자 인터페이스.
   - Controller  : 데이터와 비즈니스 로직 사이의 상호동작 관리.
   - 사용자 인터페이스와 비즈니스 로직을 분리하여 서로 영향 없이 쉽게 고칠 수 있는 어플리케이션 개발이 가능하다.
+  
+### SIC - SIC/XE 머신
+| | SIC | SIC/XE |
+|:-----:|:-----:|:----:|
+|메모리|1Byte = 8bit, 1Word = 3Byte|동일|
+|주소|15bit|20bit|
+|실수|표현 불가|표현 가능|
+|명령어|포맷 없음|명령어 포맷 추가됨.|
+|주소계산방식|Indexed Addressing + Direct Addressing|Relative Addressing + Direct Addressing|
